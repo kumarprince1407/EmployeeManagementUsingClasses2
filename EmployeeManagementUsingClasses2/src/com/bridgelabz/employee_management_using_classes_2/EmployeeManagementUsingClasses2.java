@@ -4,21 +4,21 @@ import java.util.Random;
 
 public class EmployeeManagementUsingClasses2 {
 
-//UC6
-/*Calculate Wages till
-a condition of total
-working hours or
-days is reached for
-a month - Assume 100 hours and 20 days*/
+//UC7
+/*Refactor the Code
+to write a Class
+Method to Compute
+Employee Wage - Use Class Method and Class
+Variables*/
+    public static final int fullDayHrs = 8;
+    public static final int wagePerHour=20;
+    public static final int partTimeHours=4;
+    public static final int totalWorkingDays=20;
+    public static final int maxWorkingHours=100;
     public static void employeeWage(){
         int salary =0;
-        int fullDayHrs=8;
-        int wagePerHour=20;
-        int partTimeHours=4;
-        int totalWorkingDays=20;
         int workingDays=0;
         int workingHours=0;
-        int maxWorkingHours=100;
         int monthlySalary=0;
         int empHrs=0;
         Random random = new Random();
