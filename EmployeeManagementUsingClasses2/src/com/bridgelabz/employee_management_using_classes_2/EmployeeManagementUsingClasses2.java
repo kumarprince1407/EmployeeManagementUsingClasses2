@@ -4,16 +4,21 @@ import java.util.Random;
 
 public class EmployeeManagementUsingClasses2 {
 
-//UC3
-/*Add Part time
-Employee & Wage
-- Assume Part time Hour is 8*/
+//UC5
+/*Calculating Wages
+for a Month
+- Assume 20 Working Day per Month*/
     public static void employeeWage(){
         int salary =0;
         int fullDayHrs=8;
         int wagePerHour=20;
         int partTimeHours=4;
+        int totalWorkingDays=20;
+        int workingDays=0;
+        int monthlySalary=0;
         Random random = new Random();
+
+        while (workingDays <=totalWorkingDays){
         int attendance = random.nextInt(3);
         switch (attendance){
             case 0:
@@ -29,8 +34,14 @@ Employee & Wage
                 salary=partTimeHours*wagePerHour;
                 System.out.println("Daily wage: "+ salary);
 
-        }
 
+
+        }
+            monthlySalary+=salary;
+            workingDays++;
+    }
+
+        System.out.println("Monthly salary: "+ monthlySalary);
     }
 
     public static void main(String[] args) {
