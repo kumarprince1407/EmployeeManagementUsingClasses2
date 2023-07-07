@@ -4,10 +4,12 @@ import java.util.Random;
 
 public class EmployeeManagementUsingClasses2 {
 
-//UC5
-/*Calculating Wages
-for a Month
-- Assume 20 Working Day per Month*/
+//UC6
+/*Calculate Wages till
+a condition of total
+working hours or
+days is reached for
+a month - Assume 100 hours and 20 days*/
     public static void employeeWage(){
         int salary =0;
         int fullDayHrs=8;
@@ -15,10 +17,13 @@ for a Month
         int partTimeHours=4;
         int totalWorkingDays=20;
         int workingDays=0;
+        int workingHours=0;
+        int maxWorkingHours=100;
         int monthlySalary=0;
+        int empHrs=0;
         Random random = new Random();
 
-        while (workingDays <=totalWorkingDays){
+        while (workingDays <=totalWorkingDays && workingHours<=maxWorkingHours){
         int attendance = random.nextInt(3);
         switch (attendance){
             case 0:
@@ -26,18 +31,19 @@ for a Month
                 break;
             case 1:
                 System.out.println("Employee is present full-time.");
-                salary=fullDayHrs*wagePerHour;
+                empHrs=fullDayHrs;
+                salary=empHrs*wagePerHour;
                 System.out.println("Daily wage: "+ salary);
                 break;
             case 2:
                 System.out.println("Employee is present part-time. ");
-                salary=partTimeHours*wagePerHour;
+                empHrs=partTimeHours;
+                salary=empHrs*wagePerHour;
                 System.out.println("Daily wage: "+ salary);
-
-
 
         }
             monthlySalary+=salary;
+            workingHours+=empHrs;
             workingDays++;
     }
 
